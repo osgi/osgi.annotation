@@ -1,0 +1,12 @@
+# The packages of the unpacked API artifacts, one line per artifact as in
+# the monorepo (<project>.*); their versions come from the package-info
+# classes.
+Export-Package: \
+	org.osgi.annotation.bundle.*,\
+	org.osgi.annotation.versioning.*;-split-package:=first
+Bundle-Description: OSGi Annotation Release ${parsedVersion.majorVersion}, Annotations for use in compiling bundles
+
+# As the monorepo build of osgi.annotation: no imports of java.* packages, and the
+# osgi.ee requirement names the smallest compact profile.
+-noimportjava: true
+-eeprofile: auto
